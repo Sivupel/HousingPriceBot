@@ -1,4 +1,6 @@
 import pandas as pd
+import joblib
+
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
@@ -62,3 +64,7 @@ for name, model in models.items():
 print()
 print(f"Лучшая модель: {best_model_name}")
 print(f"Лучший MAE: {best_mae:.2f}")
+
+joblib.dump(best_model, "best_model.pkl")
+
+print("\nМодель сохранена в best_model.pkl")
