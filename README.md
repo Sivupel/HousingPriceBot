@@ -54,12 +54,10 @@
 
 ## Установка зависимостей
 
-```bash
 pip install -r requirements.txt
 
 
 Для запуска сервера используется uvicorn:
-```bash
 uvicorn api:app --reload
 
 
@@ -69,9 +67,7 @@ uvicorn api:app --reload
 
 В файле bot.py укажи токен:
 
-```python
 TOKEN = "your_telegram_bot_token"
 
-После этого запусти бота:
-```bash
+После этого запустите бот:
 python bot.py
