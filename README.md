@@ -67,7 +67,20 @@ uvicorn api:app --reload
 
 В файле bot.py укажи токен:
 
-TOKEN = "your_telegram_bot_token"
+TOKEN = "telegram_token"
 
 После этого запустите бот:
 python bot.py
+
+## Система сборки
+
+Для автоматизации основных действий в проект добавлен Makefile.
+
+Доступные команды:
+
+```bash
+make install
+make train
+make run-api
+make run-bot
+make clean
