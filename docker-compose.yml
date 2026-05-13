@@ -1,0 +1,19 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api.Dockerfile
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  bot:
+    build:
+      context: .
+      dockerfile: bot.Dockerfile
+    environment:
+      - TELEGRAM_TOKEN=not for git
+      - API_URL=http://api:8000/predict
+    depends_on:
+      - api
+    restart: unless-stopped
